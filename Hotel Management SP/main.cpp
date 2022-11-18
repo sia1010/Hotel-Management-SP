@@ -112,7 +112,7 @@ int main(){
             manage_Room();
 
             set_arrRoom(); //to update the textfile
-            cout<<"complete save";
+            cout << "SAVED SUCCESSFULLY" << endl;
         }
 
         else if (selection == 2) {

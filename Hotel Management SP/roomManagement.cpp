@@ -58,7 +58,29 @@ void add_Room() {
 
     /// add the room into the vector list
     arrRoom.push_back(newRoom);
-    cout << "OPERATION SUCCESS" << endl;
+    cout << "Successfully added" << endl;
+
+}
+
+void edit_Room() {
+    cout << endl << "--------------------------EDIT ROOM----------------------" << endl;
+    int target_id; room editRoom;
+    cout << "Enter the room id that you wish to edit: "; cin >> target_id;
+
+    // find if room exists
+    int index = findRoom(target_id);
+    if (index == -1) {
+        cout << "The id is not in the list. Please try again" << endl;
+        return;
+    }
+
+    editRoom.id = target_id;
+    cout << "Enter the new type of room: "; cin >> editRoom.type;
+    cout << "Enter the new price of room (RM): "; cin >> editRoom.price;
+
+    //proceed to delete the room
+    arrRoom.at(index) = editRoom;
+    cout << "Successfully edited" << endl;
 
 }
 
@@ -66,6 +88,8 @@ void delete_Room() {
     cout << endl << "--------------------------DELETE ROOM----------------------" << endl;
     int target_id;
     cout << "Enter the room id that you wish to delete: "; cin >> target_id;
+
+    // find if room exists
     int index = findRoom(target_id);
     if (index == -1) {
         cout << "The id is not in the list. Please try again" << endl;
@@ -74,19 +98,20 @@ void delete_Room() {
 
     //proceed to delete the room
     arrRoom.erase(arrRoom.begin() + index);
-    cout << "Successfully delete" << endl;
+    cout << "Successfully deleted" << endl;
 
 }
 
 void manage_Room() {
     int selection;
-    cout << "Room Management\n1.Add A New Room\n2.Edit An Existing Room\n3.Delete An Exisitng Room" << endl;
+    cout << endl << "--------------------------ROOM MANAGEMENT----------------------" << endl 
+        << "1.Add A New Room\n2.Edit An Existing Room\n3.Delete An Exisitng Room" << endl;
     cin >> selection;
     if (selection == 1) {
         add_Room();
     }
     else if (selection == 2) {
-        //
+        edit_Room();
     }
     else if (selection == 3) {
         delete_Room();
