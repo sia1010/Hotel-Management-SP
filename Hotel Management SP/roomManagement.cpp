@@ -69,11 +69,26 @@ void delete_Room() {
     int index = findRoom(target_id);
     if (index == -1) {
         cout << "The id is not in the list. Please try again" << endl;
-
+        return;
     }
 
     //proceed to delete the room
     arrRoom.erase(arrRoom.begin() + index);
     cout << "Successfully delete" << endl;
 
+}
+
+void manage_Room() {
+    int selection;
+    cout << "Room Management\n1.Add A New Room\n2.Edit An Existing Room\n3.Delete An Exisitng Room" << endl;
+    cin >> selection;
+    if (selection == 1) {
+        add_Room();
+    }
+    else if (selection == 2) {
+        //
+    }
+    else if (selection == 3) {
+        delete_Room();
+    }
 }

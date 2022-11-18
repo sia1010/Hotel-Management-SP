@@ -104,13 +104,12 @@ int main(){
 
     while(true){
         int selection=getMenu();
-        if (selection==0)
-        {
+        if (selection==0){
             break;
         }
 
         else if (selection==1){
-            add_Room();
+            manage_Room();
 
             set_arrRoom(); //to update the textfile
             cout<<"complete save";

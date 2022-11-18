@@ -88,7 +88,6 @@ void view_Reservation();
 void add_Reservation();
 
 ///////////////////////////////////////////////////////ROOM MANAGEMENT - SIA //////////////////////////////////////////////////////////////
+void manage_Room();
 void view_Room();
-void add_Room();
-void delete_Room();
 #endif 
