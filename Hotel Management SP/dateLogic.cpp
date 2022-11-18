@@ -8,7 +8,7 @@ struct date;
 
 int check_leap_year(int year)
 {
-    if( year%4==0 && year%100!=0 || year%400==0 )   //if year is a leap year
+    if(year%4==0 && year%100!=0 || year%400==0)   //if year is a leap year
     return 1;
     
     else
