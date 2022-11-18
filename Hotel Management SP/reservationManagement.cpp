@@ -58,7 +58,7 @@ void add_Reservation() {
     cout << endl << "--------------------------ADD RESERVATION----------------------" << endl;
     reservation newReservation;
     cout << "Enter the customer ic_number: "; cin >> newReservation.customer_ic;
-    cout << "Enter the room id: "; cin >> newReservation.room_id;
+    cout << "Enter the room ID: "; cin >> newReservation.room_id;
     cout << "Enter the check in date :";
     date check_in = getDate();
     cout << "Enter the check out date :";
@@ -72,12 +72,12 @@ void add_Reservation() {
     //error checking 
     if ((findRoom(newReservation.room_id) == -1) || findCustomer(newReservation.customer_ic) == -1) {
         //no record of room or customer in 
-        cout << "Error occur since the room id or customer id is not in the system. Please add the new room/customer if you still want to add the reservation." << endl;
+        cout << "Error occur since the room ID or customer ID is not in the system. Please add the new room/customer if you still want to add the reservation." << endl;
         return;//exit
     }
 
     else if (arrRoom[findRoom(newReservation.room_id)].reserved) {
-        cout << "The room is already reserved.Please try again" << endl;
+        cout << "The room is already reserved. Please try again." << endl;
         return;
 
     }
@@ -88,7 +88,7 @@ void add_Reservation() {
     //CHANGE THE ROOM CONDITION FROM VACANT TO RESERVED
     arrRoom[findRoom(newReservation.room_id)].reserved = true;
 
-    cout << "operation successful" << endl;
+    cout << "Operation successful!" << endl;
 
 
 }

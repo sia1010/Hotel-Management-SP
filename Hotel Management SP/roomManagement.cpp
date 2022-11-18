@@ -52,7 +52,7 @@ void add_Room() {
 
     //find duplicate room in the vector list
     if (findRoom(newRoom.id) != -1) {
-        cout << "The room ID is already in the list, Please try again with different ID" << endl;
+        cout << "The room ID is already in the list, Please try again with different ID." << endl;
         return; // end the function
     }
 
@@ -70,7 +70,7 @@ void edit_Room() {
     // find if room exists
     int index = findRoom(target_id);
     if (index == -1) {
-        cout << "The ID is not in the list. Please try again" << endl;
+        cout << "The ID is not in the list. Please try again." << endl;
         return;
     }
 
@@ -92,13 +92,13 @@ void delete_Room() {
     // find if room exists
     int index = findRoom(target_id);
     if (index == -1) {
-        cout << "The ID is not in the list. Please try again" << endl;
+        cout << "The ID is not in the list. Please try again." << endl;
         return;
     }
 
     //proceed to delete the room
     arrRoom.erase(arrRoom.begin() + index);
-    cout << "Successfully deleted" << endl;
+    cout << "Successfully deleted!" << endl;
 
 }
 
