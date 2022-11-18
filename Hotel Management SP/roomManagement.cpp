@@ -52,25 +52,25 @@ void add_Room() {
 
     //find duplicate room in the vector list
     if (findRoom(newRoom.id) != -1) {
-        cout << "The room id is already in the list, Please try again with different id" << endl;
+        cout << "The room ID is already in the list, Please try again with different ID" << endl;
         return; // end the function
     }
 
     /// add the room into the vector list
     arrRoom.push_back(newRoom);
-    cout << "Successfully added" << endl;
+    cout << "Successfully added!" << endl;
 
 }
 
 void edit_Room() {
     cout << endl << "--------------------------EDIT ROOM----------------------" << endl;
     int target_id; room editRoom;
-    cout << "Enter the room id that you wish to edit: "; cin >> target_id;
+    cout << "Enter the room ID that you wish to edit: "; cin >> target_id;
 
     // find if room exists
     int index = findRoom(target_id);
     if (index == -1) {
-        cout << "The id is not in the list. Please try again" << endl;
+        cout << "The ID is not in the list. Please try again" << endl;
         return;
     }
 
@@ -87,12 +87,12 @@ void edit_Room() {
 void delete_Room() {
     cout << endl << "--------------------------DELETE ROOM----------------------" << endl;
     int target_id;
-    cout << "Enter the room id that you wish to delete: "; cin >> target_id;
+    cout << "Enter the room ID that you wish to delete: "; cin >> target_id;
 
     // find if room exists
     int index = findRoom(target_id);
     if (index == -1) {
-        cout << "The id is not in the list. Please try again" << endl;
+        cout << "The ID is not in the list. Please try again" << endl;
         return;
     }
 
@@ -105,7 +105,7 @@ void delete_Room() {
 void manage_Room() {
     int selection;
     cout << endl << "--------------------------ROOM MANAGEMENT----------------------" << endl 
-        << "1.Add A New Room\n2.Edit An Existing Room\n3.Delete An Exisitng Room" << endl;
+        << "1.Add A New Room\n2.Edit An Existing Room\n3.Delete An Existing Room" << endl;
     cin >> selection;
     if (selection == 1) {
         add_Room();
