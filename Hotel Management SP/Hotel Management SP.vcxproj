@@ -130,6 +130,7 @@
     <ClInclude Include="header.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="customerManagement.cpp" />
     <ClCompile Include="dateLogic.cpp" />
     <ClCompile Include="getFromTextFile.cpp" />
     <ClCompile Include="main.cpp" />

@@ -78,7 +78,7 @@ void edit_Room() {
     cout << "Enter the new type of room: "; cin >> editRoom.type;
     cout << "Enter the new price of room (RM): "; cin >> editRoom.price;
 
-    //proceed to delete the room
+    //proceed to edit the room
     arrRoom.at(index) = editRoom;
     cout << "Successfully edited" << endl;
 

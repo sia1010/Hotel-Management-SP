@@ -4,6 +4,7 @@
 #include<stdio.h>
 #include<iomanip>
 #include<vector>
+#include<sstream>
 #include"header.h"
 using namespace std;
 
@@ -12,6 +13,13 @@ struct customer;
 struct room;
 struct date;
 struct reservation;
+
+string int_to_char(int i) {
+    stringstream strstr; string n;
+    strstr << i;
+    strstr >> n;
+    return n;
+}
 
 void view_Reservation() {
     cout << endl << "-------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
@@ -57,18 +65,33 @@ void add_Reservation() {
 
     cout << endl << "--------------------------ADD RESERVATION----------------------" << endl;
     reservation newReservation;
+
     cout << "Enter the customer ic_number: "; cin >> newReservation.customer_ic;
     cout << "Enter the room ID: "; cin >> newReservation.room_id;
+
     cout << "Enter the check in date :";
     date check_in = getDate();
+    newReservation.check_in += int_to_char(check_in.day);
+    newReservation.check_in += '/';
+    newReservation.check_in += int_to_char(check_in.month);
+    newReservation.check_in += '/';
+    newReservation.check_in += int_to_char(check_in.year);
     cout << "Enter the check out date :";
     date check_out = getDate();
+    newReservation.check_out += int_to_char(check_out.day);
+    newReservation.check_out += '/';
+    newReservation.check_out += int_to_char(check_out.month);
+    newReservation.check_out += '/';
+    newReservation.check_out += int_to_char(check_out.year);
+    
     //find for the price of the room and duration of stay
     double roomPrice = arrRoom[findRoom(newReservation.room_id)].price;
     int duration = getDurationOfStay(check_in.day, check_out.day, check_in.month, check_out.month, check_in.year, check_out.year);
     newReservation.charged_price = roomPrice * duration;
+
     cout << "Total charges is RM " << newReservation.charged_price << endl;
     cout << "Enter the deposited money: ";cin >> newReservation.deposit;
+
     //error checking 
     if ((findRoom(newReservation.room_id) == -1) || findCustomer(newReservation.customer_ic) == -1) {
         //no record of room or customer in 
