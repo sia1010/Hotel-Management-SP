@@ -84,36 +84,20 @@ void edit_Room() {
 
 }
 
-void delete_Room() {
-    cout << endl << "--------------------------DELETE ROOM----------------------" << endl;
-    int target_id;
-    cout << "Enter the room ID that you wish to delete: "; cin >> target_id;
-
-    // find if room exists
-    int index = findRoom(target_id);
-    if (index == -1) {
-        cout << "The ID is not in the list. Please try again." << endl;
-        return;
-    }
-
-    //proceed to delete the room
-    arrRoom.erase(arrRoom.begin() + index);
-    cout << "Successfully deleted!" << endl;
-
-}
-
 void manage_Room() {
     int selection;
     cout << endl << "--------------------------ROOM MANAGEMENT----------------------" << endl 
-        << "1.Add A New Room\n2.Edit An Existing Room\n3.Delete An Existing Room" << endl;
-    cin >> selection;
+        << "1.Add A New Room\n2.Edit An Existing Room" << endl;
+    cout << "Please input the wanted operation code[1-2], otherwise input '0' to cancel: "; cin >> selection;
+    //simple error checking- later add
+    while (selection < 0 || selection>2) {
+        cout << "Wrong input!\n Please enter the correct operation code [0-2]: "; cin >> selection;
+    }
+
     if (selection == 1) {
         add_Room();
     }
     else if (selection == 2) {
         edit_Room();
-    }
-    else if (selection == 3) {
-        delete_Room();
     }
 }
