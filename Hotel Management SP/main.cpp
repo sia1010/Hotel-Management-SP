@@ -76,7 +76,7 @@ void view_Customer() {
     cout << "Enter customer IC number: "; cin >> CustomerIC;
     
         //find customer based on ic
-        int custIndex = findCustomer(CustomerIC); //this is broken
+        int custIndex = findCustomerUsingDifferentVariable(CustomerIC); //this is broken
 
         if (custIndex != -1) {
             cout << endl << "-------------------------------------------------------------------------------" << endl;

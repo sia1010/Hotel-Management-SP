@@ -33,14 +33,33 @@ int findRoom(int room_id) {
     return -1;//not found
 }
 
-int findCustomer(char ic[15]) {
+int findCustomer(char ic[]) {
 
     //tranverse through every room and find the 
     bool found = false;
 
     for (int i = 0; i < arrCustomer.size(); i++)
     {
-        if (strcmp(arrCustomer[i].ic_number, ic) == 0)
+        if (strcmp(arrCustomer[i].ic_number, ic))
+        {
+
+            found = true;
+            return i;
+
+        }
+    }
+
+    return -1;//not found
+}
+
+int findCustomerUsingDifferentVariable(char ic[]) {
+
+    //tranverse through every room and find the 
+    bool found = false;
+
+    for (int i = 0; i < arrCustomer.size(); i++)
+    {
+        if (strcmp(arrCustomer[i].ic_number, ic))
         {
 
             found = true;
