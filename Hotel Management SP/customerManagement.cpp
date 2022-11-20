@@ -22,7 +22,7 @@ void add_Customer() {
     cout << "Enter the ic number in the format(XXXXXX-XX-XXXX): ";cin >> newCustomer.ic_number;
 
     //find duplicate room in the vector list
-    if (findCustomer(newCustomer.ic_number) != -1) { //this is broken
+    if (findCustomerUsingDifferentVariable(newCustomer.ic_number) != -1) { //this is broken
         cout << "The customer ic is already in the list, Please try again." << endl;
         return; // end the function
     }
