@@ -66,17 +66,18 @@ void add_Reservation() {
     cout << endl << "--------------------------ADD RESERVATION----------------------" << endl;
     reservation newReservation;
 
-    cout << "Enter the customer ic_number: "; cin >> newReservation.customer_ic;
+    cout << "Enter the customer IC number: "; cin >> newReservation.customer_ic;
     cout << "Enter the room ID: "; cin >> newReservation.room_id;
 
-    cout << "Enter the check in date :";
+
+    cout << "Enter the check in date: \n";
     date check_in = getDate();
     newReservation.check_in += int_to_char(check_in.day);
     newReservation.check_in += '/';
     newReservation.check_in += int_to_char(check_in.month);
     newReservation.check_in += '/';
     newReservation.check_in += int_to_char(check_in.year);
-    cout << "Enter the check out date :";
+    cout << "Enter the check out date: \n";
     date check_out = getDate();
     newReservation.check_out += int_to_char(check_out.day);
     newReservation.check_out += '/';

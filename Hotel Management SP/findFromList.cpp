@@ -16,7 +16,7 @@ struct reservation;
 
 int findRoom(int room_id) {
 
-    //tranverse through every room and find the 
+    //tranverse through every room and find the specific room
     bool found = false;
 
     for (int i = 0; i < arrRoom.size(); i++)
@@ -35,7 +35,7 @@ int findRoom(int room_id) {
 
 int findCustomer(char ic[]) {
 
-    //tranverse through every room and find the 
+    //tranverse through every customer and find the specific customer
     bool found = false;
 
     for (int i = 0; i < arrCustomer.size(); i++)
@@ -54,7 +54,7 @@ int findCustomer(char ic[]) {
 
 int findCustomerUsingDifferentVariable(char ic[]) {
 
-    //tranverse through every room and find the 
+    //tranverse through every customer and find the specific customer
     bool found = false;
 
     for (int i = 0; i < arrCustomer.size(); i++)
@@ -73,7 +73,7 @@ int findCustomerUsingDifferentVariable(char ic[]) {
 
 int findReservation(int id) {
 
-    //tranverse through every room and find the 
+    //tranverse through every reservation and find the specific reservation
     bool found = false;
 
     for (int i = 0; i < arrReservation.size(); i++)

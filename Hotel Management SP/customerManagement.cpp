@@ -22,7 +22,7 @@ void add_Customer() {
     cout << "Enter the ic number in the format(XXXXXX-XX-XXXX): ";cin >> newCustomer.ic_number;
 
     //find duplicate room in the vector list
-    if (findCustomer(newCustomer.ic_number) != -1) { //this is broken
+    if (findCustomer(newCustomer.ic_number) != -1) { 
         cout << "The customer ic is already in the list, Please try again." << endl;
         return; // end the function
     }
@@ -39,8 +39,9 @@ void view_Customer() {
     cout << "Enter customer IC number: "; cin >> CustomerIC;
 
     //find customer based on ic
-    int custIndex = findCustomerUsingDifferentVariable(CustomerIC); //this is broken
+    int custIndex = findCustomerUsingDifferentVariable(CustomerIC); 
 
+    //print output
     if (custIndex != -1) {
         cout << endl << "-------------------------------------------------------------------------------" << endl;
         printElement("CUSTOMER IC", 15);

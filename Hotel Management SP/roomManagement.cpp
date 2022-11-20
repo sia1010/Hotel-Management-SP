@@ -56,7 +56,7 @@ void add_Room() {
         return; // end the function
     }
 
-    /// add the room into the vector list
+    //add the room into the vector list
     arrRoom.push_back(newRoom);
     cout << "Successfully added!" << endl;
 
@@ -67,7 +67,7 @@ void edit_Room() {
     int target_id; room editRoom;
     cout << "Enter the room ID that you wish to edit: "; cin >> target_id;
 
-    // find if room exists
+    //find if room exists
     int index = findRoom(target_id);
     if (index == -1) {
         cout << "The ID is not in the list. Please try again." << endl;
@@ -89,7 +89,8 @@ void manage_Room() {
     cout << endl << "--------------------------ROOM MANAGEMENT----------------------" << endl 
         << "1.Add A New Room\n2.Edit An Existing Room" << endl;
     cout << "Please input the wanted operation code[1-2], otherwise input '0' to cancel: "; cin >> selection;
-    //simple error checking- later add
+
+    //simple error checking
     while (selection < 0 || selection>2) {
         cout << "Wrong input!\n Please enter the correct operation code [0-2]: "; cin >> selection;
     }
