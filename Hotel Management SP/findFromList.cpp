@@ -59,7 +59,7 @@ int findCustomerUsingDifferentVariable(char ic[]) {
 
     for (int i = 0; i < arrCustomer.size(); i++)
     {
-        if (strcmp(arrCustomer[i].ic_number, ic))
+        if (strcmp(arrCustomer[i].ic_number, ic) == 0)
         {
 
             found = true;
