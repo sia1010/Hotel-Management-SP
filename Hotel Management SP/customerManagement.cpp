@@ -41,6 +41,7 @@ void view_Customer() {
     //find customer based on ic
     int custIndex = findCustomer(CustomerIC); //this is broken
 
+    //print output
     if (custIndex != -1) {
         cout << endl << "-------------------------------------------------------------------------------" << endl;
         printElement("CUSTOMER IC", 15);

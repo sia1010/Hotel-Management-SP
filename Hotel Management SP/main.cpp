@@ -7,7 +7,6 @@
 #include"header.h"
 using namespace std;
 
-//test
 /////////////////////////////////////////////////////USER STRUCT DECLARATION////////////////////////////////////////////////////////
 struct customer;
 struct room;
@@ -66,7 +65,7 @@ int getMenu() {
     cout << " 1. MANAGE ROOM\n 2. ADD RESERVATION\n 3. VIEW ROOM\n 4. VIEW RESERVATION \n 5. ADD CUSTOMER \n 6. VIEW CUSTOMER \n 7. SAVE CHANGES \n 0. EXIT" << endl;
 
     cout << "Please input the wanted operation code[1-7], otherwise input '0' to exit: "; cin >> input;
-    //simple error checking- later add
+    //simple error checking
     while (input < 0 || input>7) {
         cout << "Wrong input!\n Please enter the correct operation code [0-7]: "; cin >> input;
     }
@@ -78,7 +77,6 @@ int getMenu() {
 
 int main(){
     // must be at start to get the current data from file to the vector list
-    ///
     get_arrCustomer();
     get_arrReservation();
     get_arrRoom();
@@ -128,7 +126,7 @@ int main(){
             cout << "SAVED SUCCESSFULLY!" << endl;
 
         }
-    //use all the set_arrXXXXX() to write back from the vector list to the textfile. Happy coding i guess. Please don't be ambitious for 5% project.Thenks
+    //use all the set_arrXXXXX() to write back from the vector list to the textfile.
         
     }
     
