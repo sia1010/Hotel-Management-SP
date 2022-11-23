@@ -82,7 +82,7 @@ int main(){
     get_arrRoom();
 
     while(true){
-        int selection=getMenu();
+        int selection = getMenu();
         if (selection == 0){
             break;
         }
@@ -130,12 +130,6 @@ int main(){
         
     }
     
-
-
-
-
-   
-
 
 
     return 0;

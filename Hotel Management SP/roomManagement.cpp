@@ -55,10 +55,14 @@ void add_Room() {
         cout << "The room ID is already in the list, Please try again with different ID." << endl;
         return; // end the function
     }
+    else
+        cout << "Successfully added!" << endl;
 
     //add the room into the vector list
     arrRoom.push_back(newRoom);
-    cout << "Successfully added!" << endl;
+    set_arrRoom();
+
+
 
 }
 

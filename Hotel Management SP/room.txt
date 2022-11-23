@@ -4,3 +4,4 @@
 14 DELUXE 453.65 0
 15 MEGA 800.67 0
 12 Ultra 0 0
+120 Quadruple 400 1

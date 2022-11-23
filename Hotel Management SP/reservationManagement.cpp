@@ -111,6 +111,7 @@ void add_Reservation() {
     arrReservation.push_back(newReservation);
     //CHANGE THE ROOM CONDITION FROM VACANT TO RESERVED
     arrRoom[findRoom(newReservation.room_id)].reserved = true;
+    set_arrReservation();
 
     cout << "Operation successful!" << endl;
 
